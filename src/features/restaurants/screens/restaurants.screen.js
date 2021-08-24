@@ -10,6 +10,7 @@ import { Search } from "../components/search.component";
 import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
 import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
 import { FavouritesContext } from "../../../services/favourites/favourites.context";
+import { colors } from "../../../infrastructure/theme/colors";
 
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -36,7 +37,7 @@ export const RestaurantsScreen = ({ navigation }) => {
     <SafeArea>
       {isLoading && (
         <LoadingContainer>
-          <Loading size={50} animating={true} />
+          <Loading size={50} animating={true} color={colors.brand.primary} />
         </LoadingContainer>
       )}
       <Search
